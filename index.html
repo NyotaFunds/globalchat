@@ -261,7 +261,7 @@ function validateAndPay() {
     fetch('https://stkpush111.onrender.com/pay', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ phone_number: formatted, amount: 100 })
+        body: JSON.stringify({ phone_number: formatted, amount: 1 })
     })
     .then(res => res.ok ? res.json() : Promise.reject())
     .then(() => { payWin.innerHTML = `<h5 class='text-green-600 font-bold'>STK Push Sent! Enter Pin on your phone.</h5>`; })
